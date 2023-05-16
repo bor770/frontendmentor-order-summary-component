@@ -28,5 +28,6 @@ body {
   background-repeat: no-repeat;
   display: flex;
   font-family: "Red Hat Display", Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
   justify-content: center;
 }
