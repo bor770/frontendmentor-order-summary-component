@@ -1,0 +1,18 @@
+:host {
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 20.312rem;
+}
+
+.content {
+  height: 25.625rem;
+  padding: 2rem 1.562rem;
+}
+
+h1 {
+  color: var(--color-neutral-dark-blue);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
