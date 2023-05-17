@@ -6,7 +6,6 @@
 }
 
 .content {
-  font-size: 0.93rem;
   height: 25.625rem;
   padding: 2rem 1.562rem;
 }
@@ -21,6 +20,7 @@ h1 {
 
 p {
   color: var(--color-neutral-desaturated-blue);
+  font-size: 0.93rem;
   line-height: 1.65;
   margin: 0 auto 1.5rem;
   width: 15.312rem;
@@ -33,7 +33,11 @@ p {
   grid-template-areas:
     "img type  a"
     "img price a";
+  grid-template-columns: 4.1rem;
+  justify-items: start;
+  margin-bottom: 1.562rem;
   padding: 1rem;
+  row-gap: 3px;
 }
 
 .music {
@@ -41,17 +45,60 @@ p {
 }
 
 .type {
+  align-self: end;
   color: var(--color-neutral-dark-blue);
+  font-size: 0.85rem;
   font-weight: 900;
   grid-area: type;
 }
 
 .price {
+  align-self: start;
   color: var(--color-neutral-desaturated-blue);
+  font-size: 0.9rem;
   grid-area: price;
 }
 
 .change {
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 900;
   grid-area: a;
+  justify-self: end;
 }
 
+.change:active {
+  color: var(--color-neutral-desaturated-blue);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.proceed {
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.cancel {
+  font-weight: 900;
+}
+
+.button {
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 90rem) {
+  :host {
+    width: 28.125rem;
+  }
+
+  .content {
+    height: 30rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}

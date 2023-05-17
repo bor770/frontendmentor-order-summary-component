@@ -31,3 +31,10 @@ body {
   font-weight: 500;
   justify-content: center;
 }
+
+@media (min-width: 90rem) {
+  body {
+    background-image: url(assets/images/pattern-background-desktop.svg);
+    background-position-y: top;
+  }
+}

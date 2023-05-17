@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,24 +11,121 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
+
 $order-summary-component-primary: mat.define-palette(mat.$indigo-palette);
-$order-summary-component-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$order-summary-component-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $order-summary-component-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$order-summary-component-theme: mat.define-light-theme((
-  color: (
-    primary: $order-summary-component-primary,
-    accent: $order-summary-component-accent,
-    warn: $order-summary-component-warn,
+$order-summary-component-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $order-summary-component-primary,
+      accent: $order-summary-component-accent,
+      warn: $order-summary-component-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($order-summary-component-theme);
 
+// @include mat.all-component-themes($order-summary-component-theme);
+
+@include mat.core-theme($order-summary-component-theme);
+@include mat.button-theme($order-summary-component-theme);
+@include mat.card-theme($order-summary-component-theme);
+
+// Bright blue theme
+
+.bright-blue {
+  $bright-blue-palette: (
+    50: #ede6fc,
+    100: #cfc2f7,
+    200: #af99f2,
+    300: #8b6fee,
+    400: #6d4eeb,
+    500: #482de6,
+    600: #3829e0,
+    700: #1621d8,
+    800: #001cd2,
+    900: #000dca,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: black,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  );
+
+  $bright-blue-primary: mat.define-palette($bright-blue-palette, 600);
+
+  $bright-blue-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $bright-blue-primary,
+        accent: $order-summary-component-accent,
+      ),
+    )
+  );
+
+  @include mat.button-color($bright-blue-theme);
+}
+
+// White theme
+
+.white {
+  $white-palette: (
+    50: white,
+    100: #fafafa,
+    200: #f5f5f5,
+    300: #f0f0f0,
+    400: #dedede,
+    500: #c2c2c2,
+    600: #979797,
+    700: #818181,
+    800: #606060,
+    900: #3c3c3c,
+    A100: hsl(224, 23%, 55%),
+    contrast: (
+      50: hsl(224, 23%, 55%),
+      100: white,
+      200: white,
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  );
+
+  $white-primary: mat.define-palette($white-palette, A100);
+
+  $white-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $white-primary,
+        accent: $order-summary-component-accent,
+      ),
+    )
+  );
+
+  @include mat.button-color($white-theme);
+}
