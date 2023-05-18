@@ -96,9 +96,41 @@ ul {
 
   .content {
     height: 30rem;
+    padding: 2.95rem 3.125rem;
   }
 
   h1 {
     font-size: 1.75rem;
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    width: unset;
+  }
+
+  .plan {
+    grid-template-columns: 4.2rem;
+    margin-bottom: 2rem;
+    padding: 1.55rem 1.4rem;
+    row-gap: 7px;
+  }
+
+  .type {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .change {
+    font-size: 0.85rem;
+  }
+
+  .proceed {
+    margin-bottom: 2.35rem;
   }
 }
