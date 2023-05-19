@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frontendmentor-order-summary": {
+      "hosting": {
+        "order-summary-component": [
+          "frontendmentor-order-summary"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frontendmentor-order-summary"
+  }
+}
